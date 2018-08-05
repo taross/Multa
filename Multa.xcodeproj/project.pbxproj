@@ -19,6 +19,8 @@
 		559E9E8E211727310029FE16 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E9E8D211727310029FE16 /* ProfileViewController.swift */; };
 		559E9E902117273E0029FE16 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E9E8F2117273E0029FE16 /* GroupsViewController.swift */; };
 		559E9E922117274E0029FE16 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E9E912117274E0029FE16 /* FriendsViewController.swift */; };
+		559E9E9521172D810029FE16 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559E9E9421172D810029FE16 /* Nimble.framework */; };
+		559E9E9721172D8C0029FE16 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559E9E9621172D8C0029FE16 /* Quick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		559E9E8D211727310029FE16 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		559E9E8F2117273E0029FE16 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		559E9E912117274E0029FE16 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		559E9E9421172D810029FE16 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		559E9E9621172D8C0029FE16 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				559E9E9721172D8C0029FE16 /* Quick.framework in Frameworks */,
+				559E9E9521172D810029FE16 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +97,7 @@
 				559E9E65211712FC0029FE16 /* MultaTests */,
 				559E9E70211712FC0029FE16 /* MultaUITests */,
 				559E9E4D211712F90029FE16 /* Products */,
+				559E9E9321172D800029FE16 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -202,6 +209,15 @@
 				559E9E912117274E0029FE16 /* FriendsViewController.swift */,
 			);
 			path = Firends;
+			sourceTree = "<group>";
+		};
+		559E9E9321172D800029FE16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				559E9E9621172D8C0029FE16 /* Quick.framework */,
+				559E9E9421172D810029FE16 /* Nimble.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -553,6 +569,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8MZ6625L9H;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MultaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -574,6 +594,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8MZ6625L9H;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MultaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
